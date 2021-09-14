@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/grid.css" />
+    <link rel="stylesheet" href="src/css/login.css" />
+    <link rel="stylesheet" href="src/css/specific.css" />
+    <script src="src/js/vue.js"></script>
+    <script src="src/js/vuex.js"></script>
+    <title>Laviup</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <header>
+                <nav class="nav-in" v-if="logged_in === true">
+                    <div class="logo">
+                        <img src="icons/logo.svg" alt="logo" />
+                    </div>
+                    <!-- se que no es la mejor solucion -->
+                    <div class="pill-cont">
+                        <div class="pill">
+                            <div class="pill1">
+                                <a href="#">Tienda</a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="pill2">
+                                <a href="#">Mi perfil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="i-1">
+                            <img src="icons/e-lupa.svg" alt="lupa" />
+                        </a>
+                        <a href="#" class="i-2">
+                            <img src="icons/e-com-b.svg" alt="com" />
+                        </a>
+                        <a href="#" class="i-3">
+                            <img src="icons/e-cart.svg" alt="cart" />
+                        </a>
+                        <a href="#" class="i-4">
+                            <img src="icons/e-bell.svg" alt="bell" />
+                        </a>
+                    </div>
+                </nav>
+                <nav class="nav-out" v-if="logged_in===false">
+                    <div class="logo">
+                        <img src="icons/logo.svg" alt="logo" />
+                    </div>
+                    <div class="corner">
+                        <div class="inp-search">
+                            <input type="text" placeholder="Buscar..." />
+                            <div class="search-img">
+                                <a>
+                                    <img src="icons/e-lupa.svg" alt="" />
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="login-btn">
+                            <input type="button" value="Iniciar Sesión" @click="login_form = true" />
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <br />
+            <div class="wrapper">
+                <div class="left-side">
+                    <div class="mark">
+                        <a href="#">
+                            <div class="pic">
+                                <img src="img/post-pic.png" alt="foto" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mark">
+                        <a href="#">
+                            <div class="pic">
+                                <img src="img/post-pic.png" alt="foto" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mark">
+                        <a href="#">
+                            <div class="pic">
+                                <img src="img/post-pic.png" alt="foto" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mark">
+                        <a href="#">
+                            <div class="pic">
+                                <img src="img/post-pic.png" alt="foto" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mark">
+                        <a href="#">
+                            <div class="pic">
+                                <img src="img/post-pic.png" alt="foto" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mark">
+                        <a href="#">
+                            <div class="pic">
+                                <img src="img/post-pic.png" alt="foto" />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="center-side">
+                    <div class="left">
+                        <div class="card">
+                            <div class="top">
+                                <div class="avatar">
+                                    <img src="img/post-pic.png" alt="" />
+                                </div>
+                                <div class="info">
+                                    <p class="name">Alain Bermudez</p>
+                                    <p class="city">Madrid</p>
+                                </div>
+                                <input type="button" value="..." class="opt">
+                            </div>
+                            <div class="post-pic">
+                                <img src="img/post-pic.png" alt="" />
+                            </div>
+                            <div class="bottom">
+                                <div class="btn">
+                                    <div class="com-btn">
+                                        <button>
+                                            <img src="icons/e-com.svg" alt="lupa" />
+                                        </button>
+                                    </div>
+                                    <div class="like-btn">
+                                        <button>
+                                            <img src="icons/e-heart.svg" alt="lupa" />
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="post">
+                                    Si me ves pensando no es nada, es 1 brisa!!!
+                                </p>
+                                <div class="comment">
+                                    <div class="comment-pic">
+                                        <img src="img/com-pic.png" alt="" />
+                                    </div>
+                                    <div class="comment-text">
+                                        <p class="com-user">Ander Garcia</p>
+                                        <p class="com-com">Uii!!!! que profundo</p>
+                                        <p class="com-number">Ver los 32 comentarios</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="top">
+                                <div class="avatar">
+                                    <img src="img/post-pic.png" alt="" />
+                                </div>
+                                <div class="info">
+                                    <p class="name">Alain Bermudez</p>
+                                    <p class="city">Madrid</p>
+                                </div>
+                                <input type="button" value="..." class="opt">
+                            </div>
+                            <div class="post-pic">
+                                <img src="img/post-pic.png" alt="" />
+                            </div>
+                            <div class="bottom">
+                                <div class="btn">
+                                    <div class="com-btn">
+                                        <button>
+                                            <img src="icons/e-com.svg" alt="lupa" />
+                                        </button>
+                                    </div>
+                                    <div class="like-btn">
+                                        <button>
+                                            <img src="icons/e-heart.svg" alt="lupa" />
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="post">
+                                    Si me ves pensando no es nada, es 1 brisa!!!
+                                </p>
+                                <div class="comment">
+                                    <div class="comment-pic">
+                                        <img src="img/com-pic.png" alt="" />
+                                    </div>
+                                    <div class="comment-text">
+                                        <p class="com-user">Ander Garcia</p>
+                                        <p class="com-com">Uii!!!! que profundo</p>
+                                        <p class="com-number">Ver los 32 comentarios</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="top">
+                                <div class="avatar">
+                                    <img src="img/post-pic.png" alt="" />
+                                </div>
+                                <div class="info">
+                                    <p class="name">Alain Bermudez</p>
+                                    <p class="city">Madrid</p>
+                                </div>
+                                <input type="button" value="..." class="opt">
+                            </div>
+                            <div class="post-pic">
+                                <img src="img/post-pic.png" alt="" />
+                            </div>
+                            <div class="bottom">
+                                <div class="btn">
+                                    <div class="com-btn">
+                                        <button>
+                                            <img src="icons/e-com.svg" alt="lupa" />
+                                        </button>
+                                    </div>
+                                    <div class="like-btn">
+                                        <button>
+                                            <img src="icons/e-heart.svg" alt="lupa" />
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="post">
+                                    Si me ves pensando no es nada, es 1 brisa!!!
+                                </p>
+                                <div class="comment">
+                                    <div class="comment-pic">
+                                        <img src="img/com-pic.png" alt="" />
+                                    </div>
+                                    <div class="comment-text">
+                                        <p class="com-user">Ander Garcia</p>
+                                        <p class="com-com">Uii!!!! que profundo</p>
+                                        <p class="com-number">Ver los 32 comentarios</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="top">
+                                <div class="avatar">
+                                    <img src="img/post-pic.png" alt="" />
+                                </div>
+                                <div class="info">
+                                    <p class="name">Alain Bermudez</p>
+                                    <p class="city">Madrid</p>
+                                </div>
+                                <input type="button" value="..." class="opt">
+                            </div>
+                            <div class="post-pic">
+                                <img src="img/post-pic.png" alt="" />
+                            </div>
+                            <div class="bottom">
+                                <div class="btn">
+                                    <div class="com-btn">
+                                        <button>
+                                            <img src="icons/e-com.svg" alt="lupa" />
+                                        </button>
+                                    </div>
+                                    <div class="like-btn">
+                                        <button>
+                                            <img src="icons/e-heart.svg" alt="lupa" />
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="post">
+                                    Si me ves pensando no es nada, es 1 brisa!!!
+                                </p>
+                                <div class="comment">
+                                    <div class="comment-pic">
+                                        <img src="img/com-pic.png" alt="" />
+                                    </div>
+                                    <div class="comment-text">
+                                        <p class="com-user">Ander Garcia</p>
+                                        <p class="com-com">Uii!!!! que profundo</p>
+                                        <p class="com-number">Ver los 32 comentarios</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="card">
+                            <div class="top">
+                                <div class="avatar">
+                                    <img src="img/post-pic.png" alt="" />
+                                </div>
+                                <div class="info">
+                                    <p class="name">Alain Bermudez</p>
+                                    <p class="city">Madrid</p>
+                                </div>
+                                <input type="button" value="..." class="opt">
+                            </div>
+                            <div class="post-pic">
+                                <img src="img/post-pic.png" alt="" />
+                            </div>
+                            <div class="bottom">
+                                <div class="btn">
+                                    <div class="com-btn">
+                                        <button>
+                                            <img src="icons/e-com.svg" alt="lupa" />
+                                        </button>
+                                    </div>
+                                    <div class="like-btn">
+                                        <button>
+                                            <img src="icons/e-heart.svg" alt="lupa" />
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="post">
+                                    Si me ves pensando no es nada, es 1 brisa!!!
+                                </p>
+                                <div class="comment">
+                                    <div class="comment-pic">
+                                        <img src="img/com-pic.png" alt="" />
+                                    </div>
+                                    <div class="comment-text">
+                                        <p class="com-user">Ander Garcia</p>
+                                        <p class="com-com">Uii!!!! que profundo</p>
+                                        <p class="com-number">Ver los 32 comentarios</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="top">
+                                <div class="avatar">
+                                    <img src="img/post-pic.png" alt="" />
+                                </div>
+                                <div class="info">
+                                    <p class="name">Alain Bermudez</p>
+                                    <p class="city">Madrid</p>
+                                </div>
+                                <input type="button" value="..." class="opt">
+                            </div>
+                            <div class="post-pic">
+                                <img src="img/post-pic.png" alt="" />
+                            </div>
+                            <div class="bottom">
+                                <div class="btn">
+                                    <div class="com-btn">
+                                        <button>
+                                            <img src="icons/e-com.svg" alt="lupa" />
+                                        </button>
+                                    </div>
+                                    <div class="like-btn">
+                                        <button>
+                                            <img src="icons/e-heart.svg" alt="lupa" />
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="post">
+                                    Si me ves pensando no es nada, es 1 brisa!!!
+                                </p>
+                                <div class="comment">
+                                    <div class="comment-pic">
+                                        <img src="img/com-pic.png" alt="" />
+                                    </div>
+                                    <div class="comment-text">
+                                        <p class="com-user">Ander Garcia</p>
+                                        <p class="com-com">Uii!!!! que profundo</p>
+                                        <p class="com-number">Ver los 32 comentarios</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="top">
+                                <div class="avatar">
+                                    <img src="img/post-pic.png" alt="" />
+                                </div>
+                                <div class="info">
+                                    <p class="name">Alain Bermudez</p>
+                                    <p class="city">Madrid</p>
+                                </div>
+                                <input type="button" value="..." class="opt">
+                            </div>
+                            <div class="post-pic">
+                                <img src="img/post-pic.png" alt="" />
+                            </div>
+                            <div class="bottom">
+                                <div class="btn">
+                                    <div class="com-btn">
+                                        <button>
+                                            <img src="icons/e-com.svg" alt="lupa" />
+                                        </button>
+                                    </div>
+                                    <div class="like-btn">
+                                        <button>
+                                            <img src="icons/e-heart.svg" alt="lupa" />
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="post">
+                                    Si me ves pensando no es nada, es 1 brisa!!!
+                                </p>
+                                <div class="comment">
+                                    <div class="comment-pic">
+                                        <img src="img/com-pic.png" alt="" />
+                                    </div>
+                                    <div class="comment-text">
+                                        <p class="com-user">Ander Garcia</p>
+                                        <p class="com-com">Uii!!!! que profundo</p>
+                                        <p class="com-number">Ver los 32 comentarios</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="top">
+                                <div class="avatar">
+                                    <img src="img/post-pic.png" alt="" />
+                                </div>
+                                <div class="info">
+                                    <p class="name">Alain Bermudez</p>
+                                    <p class="city">Madrid</p>
+                                </div>
+                                <input type="button" value="..." class="opt">
+                            </div>
+                            <div class="post-pic">
+                                <img src="img/post-pic.png" alt="" />
+                            </div>
+                            <div class="bottom">
+                                <div class="btn">
+                                    <div class="com-btn">
+                                        <button>
+                                            <img src="icons/e-com.svg" alt="lupa" />
+                                        </button>
+                                    </div>
+                                    <div class="like-btn">
+                                        <button>
+                                            <img src="icons/e-heart.svg" alt="lupa" />
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="post">
+                                    Si me ves pensando no es nada, es 1 brisa!!!
+                                </p>
+                                <div class="comment">
+                                    <div class="comment-pic">
+                                        <img src="img/com-pic.png" alt="" />
+                                    </div>
+                                    <div class="comment-text">
+                                        <p class="com-user">Ander Garcia</p>
+                                        <p class="com-com">Uii!!!! que profundo</p>
+                                        <p class="com-number">Ver los 32 comentarios</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-side">
+                    <div class="destacados">
+                        <h3>Destacados</h3>
+                        <div class="pics">
+                            <div class="f1">
+                                <img src="img/1round.png" alt="round picture" />
+                            </div>
+                            <div class="f2">
+                                <img src="img/2round.png" alt="round picture" />
+                            </div>
+                            <div class="f3">
+                                <img src="img/3round.png" alt="round picture" />
+                            </div>
+                            <div class="f4">
+                                <img src="img/4round.png" alt="round picture" />
+                            </div>
+                            <div class="f5">
+                                <img src="img/5round.png" alt="round picture" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="marcas">
+                        <h3>Marcas</h3>
+                        <div class="roll">
+                            <a href="#">
+                                <div class="marca">
+                                    <img src="img/apple-pic.png" alt="apple icon" />
+                                    <p>Apple</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="marca">
+                                    <img src="img/apple-pic.png" alt="apple icon" />
+                                    <p>Apple</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="marca">
+                                    <img src="img/apple-pic.png" alt="apple icon" />
+                                    <p>Apple</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="marca">
+                                    <img src="img/apple-pic.png" alt="apple icon" />
+                                    <p>Apple</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="add">
+                <!-- <div class="plus"> -->
+                <img src="icons/plus.svg" alt="plus" />
+
+                <!-- </div> -->
+                <div class="add-text">Añadir</div>
+            </button>
+        </div>
+        <login-form v-if="login_form"></login-form>
+        <!-- <div class="cont-login" v-if="login_form">
+            <div class="login-cont">
+                <form class="form">
+                    <div class="logo">
+                        <img src="icons/logo.svg" alt="logo">
+                    </div>
+                    <div class="inputs">
+                        <input type="text" name="username" id="username" class="username"
+                            placeholder="Télefono o correo electrónico">
+                        <input type="password" name="password" id="password" class="password" placeholder="Contraseña">
+                        <a href="#">He olvidado mi contraseña</a>
+                        <input type="button" value="Iniciar" class="login"
+                            @click="logged_in = true, login_form = false">
+                    </div>
+                    <div class="social">
+                        <div class="social-line">
+                            <div class="s-l-1"></div>
+                            <p>O</p>
+                            <div class="s-l-2"></div>
+                        </div>
+                        <div class="social-icons">
+                            <img src="icons/face.svg" alt="face-icon" class="face-i">
+                            <img src="icons/face.svg" alt="go-icon" class="go-i">
+                        </div>
+                    </div>
+                </form>
+                <div class="sign-up">
+                    <p>¿Aún no eres de la familia?</p>
+                    <a href="·">Registrate</a>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <script src="src/js/main.js"></script>
+    <script src="src/components/components.js"></script>
+</body>
+
+</html>

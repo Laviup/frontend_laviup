@@ -1,0 +1,242 @@
+.cont-login {
+  /* width: 1920px;
+  height: 1080px; */
+  width: 100%;
+  padding: 0.3rem;
+  height: 100%;
+  backdrop-filter: blur(24px);
+  -x-backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  background-image: linear-gradient(
+    to right bottom,
+    #42e596ea 1%,
+    #345fc4e1 99%
+  );
+  background-image: -webkit-linear-gradient(
+    to right bottom,
+    #42e595 1%,
+    #3460c4 99%
+  );
+  position: absolute;
+  z-index: 110;
+}
+* {
+  font-size: 16px;
+  /* font-family: Gilroy☞;
+  src: local(Gilroy☞-Bold), url(/path/to/Gilroy☞-Bold.woff2) format("woff2"),
+    url(/path/to/Gilroy☞-Bold.woff) format("woff"),
+    url(/path/to/Gilroy☞-Bold.ttf) format("truetype"); */
+}
+
+.login-cont {
+  width: auto;
+  height: auto;
+  /* max-width: 30%; */
+  /* max-height: 100%; */
+  /* min-height: 37rem; */
+  margin: 4rem auto;
+  /* padding: 1rem 1.2rem; */
+  width: auto;
+  height: auto;
+  max-width: 95%;
+  /* max-height: 80%; */
+  min-height: 33rem;
+  /* margin: 30% auto; */
+  padding: 0.5rem;
+  font-size: 12px;
+  border-radius: 27px;
+  background-color: rgba(255, 255, 255, 0.404);
+}
+.form {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  /* min-height: 30rem; */
+  min-height: 27rem;
+
+  margin: 0;
+  /* margin: 0 auto 17px; */
+  border-radius: 27px;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+.login-cont .sign-up {
+  border-radius: 27px;
+  width: 100%;
+  height: 20%;
+  /* height: 100%; */
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 3.8rem;
+  overflow: hidden;
+  margin: 0.5rem auto 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: #fff;
+}
+.sign-up p {
+  font-size: 16px;
+  /* font-size: 20px; */
+}
+.sign-up a {
+  color: #43cea2;
+  font-size: 16px;
+  /* font-size: 20px; */
+  text-decoration: none;
+}
+.form .logo2 {
+  width: 100%;
+  height: 100%;
+  /* max-width: 50%; */
+  max-height: 33%;
+  margin-top: 4rem;
+}
+.inputs {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 33%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin: 0 0 40px; */
+}
+.social {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 33%;
+}
+.form .logo2 img {
+  max-width: 50%;
+  max-height: 50%;
+  margin: 0 25% 0;
+  /* margin: auto; */
+}
+
+.inputs .username::placeholder,
+.inputs .password::placeholder {
+  color: #707070af;
+}
+.inputs .username,
+.inputs .password {
+  width: 90%;
+  height: 2.2rem;
+  /* width: 100%;
+  height: 4rem; */
+  /* max-width: 80%;
+  max-height: 4rem; */
+  margin: 2rem auto 1rem;
+  padding: 0px 18px;
+  border-radius: 14px;
+  border: 0.3px solid #70707091;
+  display: block;
+  font-size: 14px;
+  background-color: #fff;
+}
+.inputs .password {
+  margin: 0 auto;
+}
+.inputs a {
+  text-align: center;
+  display: block;
+  margin: 0.5rem 0 2rem;
+  font-weight: bold;
+  line-height: 1.33;
+  letter-spacing: 0.04px;
+  text-decoration: none;
+  color: #000;
+  opacity: 0.7;
+}
+.inputs .login:hover {
+  cursor: pointer;
+}
+.inputs .login {
+  width: 90%;
+  height: 2rem;
+  /* width: 80%;
+  height: 3rem; */
+  margin: 0 auto;
+  border-radius: 14px;
+  color: #fff;
+  border: none;
+  background-color: #43cea2;
+  font-size: 14px;
+  /* font-size: 24px; */
+}
+
+.social-line {
+  width: 80%;
+  margin: 1rem auto 0;
+}
+.social-line div {
+  width: 46%;
+  height: 0;
+  border: 0.3px solid #637862;
+  padding-bottom: 4px;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+}
+.social-line div,
+p {
+  display: inline-block;
+}
+.social-icons {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: auto;
+  display: flex;
+  justify-content: center;
+}
+.social-icons img {
+  width: 2rem;
+  margin: 0 1rem;
+  border-radius: 50%;
+}
+.face-i {
+  background-color: #3b7eab;
+}
+.go-i {
+  background-color: #c7464e;
+}
+
+@media all and (min-width: 1921px) {
+  .social {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 33%;
+  }
+  .login-cont {
+    margin: 15rem auto;
+  }
+  .social-line {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
+@media all and (min-width: 376px) {
+  .login-cont {
+    max-width: 360px;
+    max-height: 553px;
+    overflow: hidden;
+  }
+  .form {
+    max-width: 344px;
+    max-height: 468px;
+    overflow: hidden;
+  }
+  .sign-up {
+    max-width: 334px;
+    max-height: 73;
+    overflow: hidden;
+  }
+}
+
+/* 375,480,768,1024,1200 */
