@@ -1,0 +1,1089 @@
+:root {
+  --pill: #989898;
+  --user: #414141;
+  --dots: #707070;
+  --verde: #63ecc2;
+  --azul: #3879bd;
+}
+html {
+  scrollbar-width: none;
+  overflow: hidden;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0 auto;
+  margin: 0 auto;
+  font-family: sans-serif;
+  position: absolute;
+}
+.pic img,
+.pics img,
+.avatar img,
+.post-pic img,
+.comment-pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+header {
+  width: 100%;
+  /* height: auto; */
+  max-height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+nav {
+  height: 100%;
+}
+/* logged-of */
+.corner {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.corner .inp-search input[type="text"] {
+  display: none;
+}
+.corner .inp-search,
+.corner .login-btn {
+  height: 100%;
+  width: 45%;
+}
+.corner .inp-search{
+  position: relative;
+}
+.corner .search-img {
+  border-radius: 50%;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  box-shadow: 0 4px 6px 2px rgba(196, 196, 196, 0.171);
+  width: 30px;
+  height: 30px;
+}
+.corner .search-img img {
+  min-width: 18px;
+  width: 18px;
+  margin: 0.3rem;
+}
+.corner .login-btn {
+  width: 40%;
+  height: 90%;
+  box-shadow: 0 10px 10px 4px rgba(196, 196, 196, 0.171);
+
+  margin: 0 0.5rem 0 1rem;
+  border-radius: 87px;
+  background-image: -webkit-linear-gradient(to right top, #4280b6, #59ecc0);
+  background-image: -moz-linear-gradient(to right top, #4280b6, #59ecc0);
+  background-image: -o-linear-gradient(to right top, #4280b6, #59ecc0);
+  background-image: linear-gradient(to right top, #4280b6, #59ecc0);
+}
+.corner .login-btn input {
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  background-color: transparent;
+  color: white;
+}
+/* logged-of -*/
+/* logged-in +*/
+.logo,
+.pill-cont,
+.icons {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  /* margin: 3% 40% 0 10%; */
+  margin: 0 0 0 10%;
+}
+.icons a {
+  width: 30px;
+  height: 30px;
+
+  max-width: 35px;
+  max-height: 35px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px 2px rgba(196, 196, 196, 0.171);
+
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 0 31px;
+}
+.icons a img {
+  width: 18px;
+  height: 18px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.icons .i-3 img {
+  width: 32px;
+  height: 27px;
+}
+/* logged-in -*/
+
+/* header - */
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.wrapper {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+
+  max-height: auto;
+  margin: 0;
+}
+.wrapper * {
+  z-index: 0;
+}
+.left-side {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+.left-side .mark {
+  min-width: 80%;
+  min-height: 3.2rem;
+  max-width: 80%;
+  max-height: 3.2rem;
+  border-radius: 0 50% 50% 0;
+  margin:  1rem 0;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0 5px 7px 0 rgb(152, 152, 152, 0.2);
+}
+.left-side .mark .pic {
+  position: absolute;
+  right: 0.1rem;
+  top: 0.35rem;
+  border-radius: 50%;
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+}
+.pic img:hover {
+  filter: sepia();
+}
+/* left-side - */
+
+.center-side {
+  border-radius: 19px;
+  background-color: #f5f7f6;
+  color: var(--user);
+  overflow: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.3rem ;
+}
+
+.center-side::-webkit-scrollbar {
+  display: none;
+}
+/* .center-side .left::-webkit-scrollbar,
+.center-side .right::-webkit-scrollbar {
+  display: none;
+} */
+
+
+.center-side .card {
+  width: 100%;
+  min-height: 83%;
+  height: auto;
+  max-height: 83%;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 0 0.4rem 0.5rem;
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+
+.card .top {
+  position: absolute;
+  z-index: 1;
+}
+
+.profile .info {
+  width: 100%;
+}
+.info .name {
+  width: 100%;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.6;
+  letter-spacing: 0.04px;
+  display: block;
+}
+.info .city {
+  display: block;
+  width: 100%;
+  font-size: 10px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.4;
+  letter-spacing: 0.04px;
+}
+
+.opt {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 10px 10px 0 rgb(152, 152, 152, 0.1);
+}
+.top .avatar {
+  margin-top: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  border: 3.5px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.card .post-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 1.4rem;
+}
+.card .bottom {
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+/* asd */
+.center-side .card .bottom .btn {
+  width: 100%;
+}
+.bottom .com-btn,
+.like-btn {
+  position: absolute;
+ top: 0;
+  width: 33px;
+  height: 33px;
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-image: -webkit-linear-gradient(to right top, #4280b6, #59ecc0);
+  background-image: -moz-linear-gradient(to right top, #4280b6, #59ecc0);
+  background-image: -o-linear-gradient(to right top, #4280b6, #59ecc0);
+  background-image: linear-gradient(to right top, #4280b6, #59ecc0);
+  box-shadow: 0 0.5px 4px 1px rgba(5, 5, 5, 0.301);
+}
+
+.com-btn {
+  right: 2.5rem;
+}
+.like-btn {
+  right: 0;
+}
+.bottom .com-btn button,
+.like-btn button {
+  border: none;
+  background-color: transparent;
+  position: relative;
+}
+.com-btn img {
+  width: 16px;
+  height: 16px;
+  /* width: 20px;
+  height: 22px; */
+  position: absolute;
+  top: -8px;
+  left: 7px;
+}
+.like-btn img {
+  width: 16px;
+  height: 18px;
+  position: absolute;
+  top: -8px;
+  left: 7px;
+}
+.bottom .post {
+  color: var(--user);
+  width: 95%;
+  margin: 2rem auto 0rem;
+  /* font-family: Gilroy☞; */
+  font-size: 10px;
+  /* font-size: 18px; */
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: 0.04px;
+  text-align: left;
+}
+.center-side .comment {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0;
+}
+.comment .comment-pic {
+  width: 16px;
+  height: 18px;
+  /* width: 30px;
+  height: 30px; */
+  border-radius: 50%;
+  overflow: hidden;
+}
+.center-side .comment-text p {
+  display: inline;
+  /* height: auto; */
+}
+.comment-text {
+  margin-left: 0.5rem;
+  width: 100%;
+}
+
+.com-user {
+  font-size: 10px;
+  /* font-size: 16px; */
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  color: var(--user);
+  text-decoration: underline;
+}
+.com-com {
+  font-size: 10px;
+  /* font-size: 16px; */
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  color: var(--pill);
+}
+.comment-text .com-number {
+  color: var(--user);
+  width: 146px;
+  font-size: 8px;
+  /* font-size: 14px; */
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.36;
+  letter-spacing: 0.03px;
+  text-align: left;
+  opacity: 0.55;
+  /* margin: 1.2rem; */
+}
+/* center-side - */
+.add {
+  position: fixed;
+  bottom: 27px;
+  left: 35%;
+  /* left: 619px; */
+  width: 148px;
+  max-width: 170px;
+  /* width: 50%; */
+  /* width: 252px; */
+  height: 44px;
+  /* height: 76px; */
+  padding: 16px 45px 15.4px 30px;
+  /* padding: 16px 45px 15.4px 48px; */
+  border-radius: 87px;
+  /* border: 6px solid hsla(0, 50%, 98%, 0.8); */
+  border: none;
+  background-image: -webkit-linear-gradient(to right, #4280b6, #59ecc0);
+  background-image: -moz-linear-gradient(to right, #4280b6, #59ecc0);
+  background-image: -o-linear-gradient(to right, #4280b6, #59ecc0);
+  background-image: linear-gradient(to right, #4280b6, #59ecc0);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+}
+.add-text {
+  width: 95px;
+  height: 40px;
+  font-size: 17px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: 0.06px;
+  text-align: left;
+  margin: 1rem 0 0 0.4rem;
+}
+.add img {
+  /* margin: 16px auto 15.4px 48px; */
+  width: 26.2px;
+  height: 26.2px;
+  /* width: 44px;
+  height: 44px; */
+}
+/* right-side + */
+
+h3 {
+  /* margin: 53px 51px 14px 42px; */
+  /* font-family: Gilroy☞; */
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.3;
+  letter-spacing: 0.06px;
+  text-align: left;
+  color: var(--pill);
+  margin: 0;
+  /* padding: 0.2rem 0 0 0.5rem; */
+}
+.right-side {
+  padding: 0;
+}
+.right-side .destacados {
+  overflow: hidden;
+  /* max-height: 120px; */
+}
+.right-side .destacados .pics {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.right-side .destacados .pics > div {
+  width: 98px;
+  height: 98px;
+  display: inline-block;
+  margin-bottom: 4rem;
+}
+.marcas {
+  margin-top: 0;
+}
+.marcas .roll a {
+  width: 61px;
+  height: 84px;
+  /* width: 55px;
+  height: 78px; */
+  padding: 0;
+  color: var(--user);
+  margin: 0;
+  font-size: 12px;
+  text-decoration: none;
+  display: inline;
+  box-shadow: 0 10px 10px 0 rgba(128, 128, 128, 0.1);
+  border-radius: 27px;
+}
+.marcas a .marca {
+  width: 100%;
+  /* width: 61px; */
+  height: 100%;
+  /* height: 84px; */
+  border-radius: 27px;
+  margin:0 auto;
+  text-align: center;
+}
+a .marca img {
+  /* width: 100%;
+    height: 50%; */
+  width: 55px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.marca p {
+  margin:0 auto ;
+  line-height: 0;
+  font-size: 12px;
+}
+.marcas .roll a:hover {
+  box-shadow: 0 0 2px 2px #59ecc0, 0 0px 2px 2px #4280b6f1,
+    0 0 2px 2px #4280b6f1;
+}
+.marcas .roll {
+  height: 200px;
+  padding-top: 10px;
+  overflow-x: scroll;
+  display: flex;
+  justify-content: space-evenly;
+  scrollbar-width: thin;
+  /* margin-bottom: 10px; */
+}
+
+.marcas::-webkit-scrollbar {
+  height: 1px;
+  width: 90%;
+}
+.marcas::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #4280b6;
+  border-radius: 10px;
+}
+.marcas::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-linear-gradient(to right top, #4280b6, #59ecc0);
+  background-image: -moz-linear-gradient(to right top, #4280b6, #59ecc0);
+  background-image: -o-linear-gradient(to right top, #4280b6, #59ecc0);
+  background-image: linear-gradient(to right top, #4280b6, #59ecc0);
+}
+nav .pill,
+.icons .i-2,
+.icons .i-3,
+.icons .i-4 {
+  display: none;
+}
+
+/* media querys */
+/* 1719- comentarios */
+/* 1600- right y left turn block level */
+
+/* @media all and (max-width: 1140px) {} */
+
+@media all and (min-width: 376px) {
+  .left-side .mark {
+    min-height: 3.5rem;
+    max-height: 4rem;}
+} 
+@media all and (min-width: 480px) {
+  .icons a {
+    width: 2rem;
+    height: 2rem;
+  }
+  .icons a img {
+    width: 22px;
+    height: 24px;
+  }
+  .icons .i-3 img {
+    width: 28px;
+    height: 23px;
+  }
+  .opt {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+  .top .avatar {
+    width:3.7rem;
+    height: 3.7rem;
+  }
+  .info .name {
+    font-size: 14px;
+  }
+  .info .city {
+    font-size: 12px;
+  }
+  .card .post-pic {
+    height: 96%;
+    margin-top: 1.7rem;
+  }
+
+  .marcas .roll a {
+    width: 65px;
+    height: 88px;
+  }
+}
+@media all and (min-width: 550px) {
+  .logo img {
+    max-width: 170px;
+    max-height: 82px;
+  }
+  .info .name {
+    font-size: 16px;
+  }
+  .info .city {
+    font-size: 14px;
+  }
+  .center-side .bottom  * {
+    font-size: 14px;
+  }
+  .card .post-pic {
+    height: 96%;
+    margin-top: 2rem;
+  }
+  .left-side .mark {
+    min-height: 4rem;
+    max-height: 4rem;
+  }
+  .profile .info {
+    padding-left: 0rem;
+    /* width: 100%; */
+  }
+  .center-side .card .bottom .btn {
+    top: 80%;
+    /* top: 23.5rem; */
+  }
+}
+@media all and (min-width: 560px){
+   .right-side .destacados {
+    max-height: 100%;
+  }
+  .left-side .mark {
+    min-height: 10%;
+    max-height: 10%;
+  }
+  .left-side .mark .pic {
+    width: 90%;
+    height: 90%;
+  }
+  .center-side .card {
+    max-width: 474px;
+    min-height: 85%;
+    height: auto;
+    max-height: 85%;
+    margin: 0 auto 0.8rem;
+  }
+}
+@media all and (min-width: 768px) {
+  .left-side .mark {
+    min-height: 12%;
+    max-height: 12%;
+  }
+  .left-side .mark .pic {
+    width: 90%;
+    height: 90%;
+  }
+  .corner .login-btn {
+    max-width: 200px;
+    height: 100%;
+  }
+  .corner .inp-search,
+  .corner .login-btn {
+    height: 100%;
+    width: 30%;
+  }
+  .corner .inp-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 10px 10px 4px rgba(196, 196, 196, 0.171);
+
+    border-radius: 27px;
+    /* width: 30%; */
+  }
+  .corner .inp-search input[type="text"] {
+    display: initial;
+    width: 80%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    padding-left: 2rem;
+  }
+  .corner .search-img {
+    width: auto;
+    box-shadow: none;
+    background-color: transparent;
+    height: 100%;
+    padding: 0;
+    margin: 0.2rem 1rem 0;
+  }
+  .corner .search-img img {
+    min-width: 20px;
+  }
+
+  .top .avatar {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .info .name {font-size: 16px;}
+  .info .city {font-size:  14px;}
+  .opt {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+  .card .post-pic {
+    height: 100%;
+    /* margin-top: 3rem; */
+  }
+  .bottom .com-btn,
+  .like-btn {
+    /* top: 36.5rem; */
+    top: 0.6rem;
+  }
+  .card .bottom {
+    padding-top: 0.7rem;
+  }
+  .add {
+    position: fixed;
+    bottom: 8rem;
+    left: 45%;
+  }
+
+  .icons .i-2,
+  .icons .i-3,
+  .icons .i-4 {
+    display: initial;
+  }
+  nav .pill {
+    display: flex;
+  }
+  .pill {
+    width: 100%;
+    height: 100%;
+    max-width: 410px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 10px 10px 4px rgba(196, 196, 196, 0.171);
+    border-radius: 87px;
+  }
+  .pill a {
+    color: var(--dots);
+    text-decoration: none;
+  }
+  .pill .line {
+    border: none;
+    box-shadow: 0 0 0px 1px rgba(196, 196, 196, 0.171);
+    height: 80%;
+    width: 0.1px;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
+
+  .corner .inp-search input {
+    display: initial;
+  }
+  .right-side .destacados .pics{
+    width: 60%;
+    margin: 0 auto;
+  }
+  .right-side .destacados .pics > div {
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  .marcas .roll a {
+    display: block;
+  }
+  .marcas .roll{
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+@media all and (min-width: 1024px) {
+  .center-side .card {
+    width: 100%;
+    min-height: 60%;
+    height: auto;
+    max-height: 60%;}
+  .top .avatar {
+    width: 80%;
+    height: 100%;
+  }
+  .opt {
+    width: 70%;
+    height: 70%;
+  }
+
+  .card .bottom {
+    padding-top: 1rem;
+  }
+  .bottom .com-btn,
+  .like-btn {
+    width: 36px;
+    height: 36px;
+  }
+  .center-side .card .bottom .btn {
+    top: 83%;
+    /* top: 23.5rem; */
+  }
+  .center-side .comment-text p {
+    display: inline;
+  }
+  .marcas .roll a {
+    width: 85px;
+    height: 108px;
+    padding: 1rem 0 0;
+    font-size: 12px;
+  }
+  a .marca img {
+    /* width: 100%;
+      height: 50%; */
+    width: 61px;
+    height: 58px;
+    border-radius: 50%;
+    margin: auto;
+  }
+  .marca p {
+    margin: auto;
+    font-size: 16px;
+  }
+  .destacados {
+    min-height: 100%;
+    height: auto;
+  }
+    .right-side .marcas {
+    max-height: 100%;
+  }
+  .right-side .destacados {
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  .right-side .destacados .pics {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  .right-side .destacados .pics > div {
+    max-width: 100%;
+  }
+  .right-side .destacados .pics div {
+    border-radius: 50%;
+    position: absolute;
+  }
+  .right-side .destacados .pics .f1 {
+    width: 195px;
+    height: 192px;
+    top: 0.5rem;
+    left: 2.5rem;
+    overflow: hidden;
+  }
+  .right-side .destacados .pics .f2 {
+    width: 261px;
+    height: 263px;
+    top: 0;
+    left: 13rem;
+  }
+  .right-side .destacados .pics .f3 {
+    width: 241px;
+    height: 240px;
+    top: 11rem;
+    left: 1rem;
+  }
+  .right-side .destacados .pics .f4 {
+    width: 247px;
+    height: 247px;
+    top: 17rem;
+    left: 13.2rem;
+  }
+  .right-side .destacados .pics .f5 {
+    width: 143px;
+    height: 143px;
+    top: 12.5rem;
+    left: 22rem;
+  }
+  .right-side .destacados .pics > div img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+  .marcas .roll {
+    height: 200px;
+    padding-top: 4rem;
+    overflow-x: scroll;
+    /* overflow: hidden; */
+    /* padding: 1rem 0; */
+    display: flex;
+    justify-content: space-evenly;
+    scrollbar-width: thin;
+    /* margin-bottom: 10px; */
+  }
+  .marcas h3 {
+    display: block;
+  }
+  .marcas::-webkit-scrollbar {
+    height: 1px;
+    width: 90%;
+  }
+  .marcas::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #4280b6;
+    border-radius: 10px;
+  }
+  .marcas::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-linear-gradient(to right top, #4280b6, #59ecc0);
+    background-image: -moz-linear-gradient(to right top, #4280b6, #59ecc0);
+    background-image: -o-linear-gradient(to right top, #4280b6, #59ecc0);
+    background-image: linear-gradient(to right top, #4280b6, #59ecc0);
+  }
+}
+@media all and (min-width: 1200px) {
+  .center-side .card {
+    margin: 1rem auto;
+    width: 45%;
+    height: 40%;
+  }
+  .top .avatar {
+    width: 100%;
+    height: 90%;
+  }
+  .center-side .info * {
+    font-size: 16px;
+  }
+  .opt {
+    width: 80%;
+    height: 60%;
+  }
+  .card .post-pic {
+    height: 90%;
+    /* margin-top: 3rem; */
+  }
+  .center-side .card .bottom .btn {
+    top: 76%;
+    /* top: 23.5rem; */
+  }
+  .bottom .post {
+    color: var(--user);
+    width: 95%;
+    margin: 0rem auto 0.5rem;
+    /* font-family: Gilroy☞; */
+    font-size: 18px;
+  }
+  .card .bottom .comment-text p {
+    font-size: 16px;
+  }
+  .card .bottom {
+    padding-top: 0rem;
+  }
+  .right-side .destacados .pics {
+    margin-left: 10%;
+  }
+
+  .marcas .roll a {
+    width: 105px;
+    height: 123px;
+    padding: 1rem 0 0;
+    font-size: 12px;
+  }
+  a .marca img {
+    /* width: 100%;
+      height: 50%; */
+    width: 71px;
+    height: 68px;
+    border-radius: 50%;
+    margin: auto;
+  }
+  .marca p {
+    margin: auto;
+    font-size: 18px;
+  }
+  .left-side .mark {
+    min-width: 120px;
+    min-height: 100px;
+    max-width: 120px;
+    max-height: 100px;
+  }
+}
+@media all and (min-width: 1530px) {
+  .center-side {
+    height: 100%;
+  }
+  .opt {
+    width: 70%;
+    height: 60%;
+  }
+  .top .avatar {
+    width: 90%;
+    height: 100%;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+}
+@media all and (min-width: 1920px) {
+  .center-side {
+    height: 100%;
+  }
+  .center-side .card {
+    max-height: 630px;
+  }
+  .card .post-pic {
+    width: 100%;
+    /* height: 90%; */
+    /* width: 492px; */
+    height: auto;
+    max-height: 492px;
+    /* width: 360px;
+    height: 360px; */
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 2.8rem;
+  }
+  .center-side .card .bottom .btn {
+    top: 77%;
+  }
+  .top .avatar {
+    width: 80%;
+    height: 100%;
+    margin-top: 2rem;
+  }
+  .top .info * {
+    font-size: 20px;
+  }
+  .bottom .post * {
+    font-size: 18px;
+  }
+
+  .bottom .post {
+    margin: 1.5rem 0;
+  }
+  .marcas,
+  .roll {
+    min-height: 100%;
+  }
+  .marcas .roll a {
+    width: 18%;
+    height: 60%;
+    max-width: 170px;
+    max-height: 180px;
+    padding: 1rem 0 0;
+    font-size: 12px;
+  }
+  a .marca img {
+    /* width: 100%;
+      height: 50%; */
+    width: 90%;
+    height: 70%;
+    max-width: 153px;
+    max-height: 111px;
+    border-radius: 50%;
+    margin: auto;
+  }
+  .marca p {
+    margin: auto;
+    font-size: 25px;
+  }
+}
+/* 375,480,768,1024,1200 */
+
+/* .center-side .card .bottom .btn {
+  top: 31rem;
+} */
+/* .add {
+  position: fixed;
+  bottom: 45px;
+  left: 619px;
+  width: 252px;
+  height: 76px;
+  padding: 16px 45px 15.4px 48px;
+} */
