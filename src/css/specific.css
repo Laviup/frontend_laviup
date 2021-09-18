@@ -64,15 +64,22 @@ nav {
   height: 100%;
   width: 45%;
 }
+.corner .inp-search{
+  position: relative;
+}
 .corner .search-img {
   border-radius: 50%;
   margin: 0;
-  padding: 0.2rem;
-  box-shadow: 0 10px 10px 4px rgba(196, 196, 196, 0.171);
-  width: 100%;
+  position: absolute;
+  right: 0;
+  box-shadow: 0 4px 6px 2px rgba(196, 196, 196, 0.171);
+  width: 30px;
+  height: 30px;
 }
 .corner .search-img img {
-  min-width: 20px;
+  min-width: 18px;
+  width: 18px;
+  margin: 0.3rem;
 }
 .corner .login-btn {
   width: 40%;
@@ -94,7 +101,8 @@ nav {
   background-color: transparent;
   color: white;
 }
-/* logged-of */
+/* logged-of -*/
+/* logged-in +*/
 .logo,
 .pill-cont,
 .icons {
@@ -104,33 +112,28 @@ nav {
   max-height: 100%;
 }
 .logo img {
-  width: 90%;
+  width: 100%;
   height: 100%;
   /* margin: 3% 40% 0 10%; */
   margin: 0 0 0 10%;
 }
-/* .logo img {
-  width: 50%;
-  height: 65%;
-  margin: 3% 40% 0 10%;
-} */
-
 .icons a {
-  width: 2rem;
-  height: 2rem;
+  width: 30px;
+  height: 30px;
 
-  max-width: 50px;
-  max-height: 50px;
+  max-width: 35px;
+  max-height: 35px;
   border-radius: 50%;
-  box-shadow: 0 10px 10px 0 rgb(152, 152, 152, 0.1);
+  box-shadow: 0 4px 6px 2px rgba(196, 196, 196, 0.171);
+
   background-color: #fff;
   position: relative;
   overflow: hidden;
   margin: 0 0 0 31px;
 }
 .icons a img {
-  width: 22px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
 
   position: absolute;
   top: 50%;
@@ -143,6 +146,8 @@ nav {
   width: 32px;
   height: 27px;
 }
+/* logged-in -*/
+
 /* header - */
 .container {
   width: 100%;
@@ -166,30 +171,22 @@ nav {
   max-height: 100%;
 }
 .left-side .mark {
-  /* width: 100%;
-  height: 100%; */
-  min-width: 4rem;
-  min-height: 4rem;
-  /* min-width: 5rem;
-  min-height: 5rem; */
-  /* max-width: 6rem;
-  max-height: 6rem; */
-  max-width: 4.1rem;
-  max-height: 4.1rem;
+  min-width: 80%;
+  min-height: 3.2rem;
+  max-width: 80%;
+  max-height: 3.2rem;
   border-radius: 0 50% 50% 0;
-  margin: 0 0 1rem;
-  /* margin: 0 0 2rem; */
+  margin:  1rem 0;
+  background-color: #fff;
   position: relative;
-  box-shadow: 0 10px 10px 0 rgb(152, 152, 152, 0.1);
+  box-shadow: 0 5px 7px 0 rgb(152, 152, 152, 0.2);
 }
 .left-side .mark .pic {
   position: absolute;
-  right: 0.2rem;
-  top: 0.5rem;
+  right: 0.1rem;
+  top: 0.35rem;
   border-radius: 50%;
-  /* width: 4rem;
-  height: 4rem; */
-  width: 70%;
+  width: 80%;
   height: 80%;
   overflow: hidden;
 }
@@ -199,16 +196,15 @@ nav {
 /* left-side - */
 
 .center-side {
-  /* height: 90%; */
-  /* height: 40%; */
-  border-radius: 27px;
+  border-radius: 19px;
   background-color: #f5f7f6;
   color: var(--user);
   overflow: hidden;
   overflow-y: auto;
   scrollbar-width: none;
-  /* position: relative; */
-  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.3rem ;
 }
 
 .center-side::-webkit-scrollbar {
@@ -218,34 +214,19 @@ nav {
 .center-side .right::-webkit-scrollbar {
   display: none;
 } */
-.center-side .left,
-.center-side .right {
-  margin: 0;
-  /* margin: 0 0.8% 0; */
-  height: auto;
-  min-height: 100%;
-  overflow-y: scroll;
-  scrollbar-width: none;
-}
+
 
 .center-side .card {
   width: 100%;
-  height: 80%;
-  /* max-height: 630px; */
-  /* max-height: 100px; */
-  /* width: 519px;
-  height: 650px; */
+  min-height: 83%;
+  height: auto;
+  max-height: 83%;
   border-radius: 15px;
   background-color: #fff;
-  padding: 0 0.2rem;
-  /* padding: 1rem 13px 24px; */
+  padding: 0 0.4rem 0.5rem;
   position: relative;
-  /* margin-bottom: 4%; */
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
-/* .center-side .left .card {
-  margin-top: 8%;
-} */
 
 .card .top {
   position: absolute;
@@ -253,18 +234,15 @@ nav {
 }
 
 .profile .info {
-  /* padding-left: 1rem; */
   width: 100%;
 }
 .info .name {
   width: 100%;
-  font-size: 10px;
-  /* font-size: 20px; */
+  font-size: 13px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: 0.6;
-  /* line-height: 1.35; */
   letter-spacing: 0.04px;
   display: block;
 }
@@ -272,19 +250,16 @@ nav {
   display: block;
   width: 100%;
   font-size: 10px;
-  /* font-size: 18px; */
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
-  line-height: 0.6;
-
-  /* line-height: 1.33; */
+  line-height: 0.4;
   letter-spacing: 0.04px;
 }
 
 .opt {
-  width: 80%;
-  height: 60%;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   background-color: #fff;
   border: none;
@@ -292,59 +267,50 @@ nav {
 }
 .top .avatar {
   margin-top: 0.8rem;
-  width: 80.26%;
-  height: 100%;
-  /* width: 71px;
-  height: 71px; */
-  /* width: 65px;
-  height: 65px; */
-  border: 3px solid #fff;
+  width: 3rem;
+  height: 3rem;
+  border: 3.5px solid #fff;
   border-radius: 50%;
   overflow: hidden;
 }
 .card .post-pic {
   width: 100%;
   height: 100%;
-  /* height: 55%;
-  min-height: 50%;
-  max-height: 80%; */
+  object-fit: contain;
   border-radius: 15px;
   overflow: hidden;
-  margin-top: 1.1rem;
+  margin-top: 1.4rem;
 }
 .card .bottom {
   height: auto;
   overflow: hidden;
+  position: relative;
 }
 /* asd */
+.center-side .card .bottom .btn {
+  width: 100%;
+}
 .bottom .com-btn,
 .like-btn {
-  width: 34px;
-  height: 34px;
-  /* width: 2.8rem;
-  height: 2.8rem; */
-  border: 3px solid white;
+  position: absolute;
+ top: 0;
+  width: 33px;
+  height: 33px;
+  display: inline-block;
+  border: 2px solid white;
   border-radius: 50%;
   background-image: -webkit-linear-gradient(to right top, #4280b6, #59ecc0);
   background-image: -moz-linear-gradient(to right top, #4280b6, #59ecc0);
   background-image: -o-linear-gradient(to right top, #4280b6, #59ecc0);
   background-image: linear-gradient(to right top, #4280b6, #59ecc0);
+  box-shadow: 0 0.5px 4px 1px rgba(5, 5, 5, 0.301);
 }
-.center-side .card .bottom .btn {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  /* top: 25rem; */
-  top: 18.6rem;
-}
+
 .com-btn {
-  margin-right: 7px;
-  /* margin-right: 0.8rem; */
+  right: 2.5rem;
 }
 .like-btn {
-  margin-right: 4px;
-  /* margin-right: 3rem; */
+  right: 0;
 }
 .bottom .com-btn button,
 .like-btn button {
@@ -371,7 +337,7 @@ nav {
 .bottom .post {
   color: var(--user);
   width: 95%;
-  margin: 1.5rem auto 0.5rem;
+  margin: 2rem auto 0rem;
   /* font-family: Gilroy☞; */
   font-size: 10px;
   /* font-size: 18px; */
@@ -440,18 +406,19 @@ nav {
 .add {
   position: fixed;
   bottom: 27px;
-  left: 45%;
+  left: 35%;
   /* left: 619px; */
-  width: 45%;
+  width: 148px;
   max-width: 170px;
   /* width: 50%; */
   /* width: 252px; */
-  height: 50px;
+  height: 44px;
   /* height: 76px; */
   padding: 16px 45px 15.4px 30px;
   /* padding: 16px 45px 15.4px 48px; */
   border-radius: 87px;
-  border: 6px solid rgba(255, 255, 255, 0.781);
+  /* border: 6px solid hsla(0, 50%, 98%, 0.8); */
+  border: none;
   background-image: -webkit-linear-gradient(to right, #4280b6, #59ecc0);
   background-image: -moz-linear-gradient(to right, #4280b6, #59ecc0);
   background-image: -o-linear-gradient(to right, #4280b6, #59ecc0);
@@ -465,7 +432,7 @@ nav {
 .add-text {
   width: 95px;
   height: 40px;
-  /* font-size: 30px; */
+  font-size: 17px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -476,8 +443,8 @@ nav {
 }
 .add img {
   /* margin: 16px auto 15.4px 48px; */
-  width: 30px;
-  height: 30px;
+  width: 26.2px;
+  height: 26.2px;
   /* width: 44px;
   height: 44px; */
 }
@@ -486,7 +453,7 @@ nav {
 h3 {
   /* margin: 53px 51px 14px 42px; */
   /* font-family: Gilroy☞; */
-  /* font-size: 30px; */
+  font-size: 16px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -495,14 +462,14 @@ h3 {
   text-align: left;
   color: var(--pill);
   margin: 0;
-  padding: 0.2rem 0 0 0.5rem;
+  /* padding: 0.2rem 0 0 0.5rem; */
 }
 .right-side {
   padding: 0;
 }
 .right-side .destacados {
   overflow: hidden;
-  max-height: 120px;
+  /* max-height: 120px; */
 }
 .right-side .destacados .pics {
   width: 100%;
@@ -513,23 +480,24 @@ h3 {
   width: 98px;
   height: 98px;
   display: inline-block;
+  margin-bottom: 4rem;
 }
-
 .marcas {
   margin-top: 0;
 }
-
 .marcas .roll a {
-  width: 55px;
-  height: 78px;
+  width: 61px;
+  height: 84px;
+  /* width: 55px;
+  height: 78px; */
   padding: 0;
   color: var(--user);
   margin: 0;
   font-size: 12px;
   text-decoration: none;
   display: inline;
-  box-shadow: 0 4px 6px 4px rgba(128, 128, 128, 0.089);
-  border-radius: 23px;
+  box-shadow: 0 10px 10px 0 rgba(128, 128, 128, 0.1);
+  border-radius: 27px;
 }
 .marcas a .marca {
   width: 100%;
@@ -537,24 +505,25 @@ h3 {
   height: 100%;
   /* height: 84px; */
   border-radius: 27px;
-  margin: auto;
+  margin:0 auto;
   text-align: center;
 }
 a .marca img {
   /* width: 100%;
     height: 50%; */
-  width: 51px;
-  height: 48px;
+  width: 55px;
+  height: 50px;
   border-radius: 50%;
-  margin: auto;
+  margin: 0 auto;
 }
 .marca p {
-  margin: auto;
+  margin:0 auto ;
+  line-height: 0;
   font-size: 12px;
 }
 .marcas .roll a:hover {
-  box-shadow: 0 0px 6px 4px #59ecc0, 0 0px 6px 4px #4280b6f1,
-    0 0px 6px 4px #4280b6f1;
+  box-shadow: 0 0 2px 2px #59ecc0, 0 0px 2px 2px #4280b6f1,
+    0 0 2px 2px #4280b6f1;
 }
 .marcas .roll {
   height: 200px;
@@ -595,33 +564,10 @@ nav .pill,
 /* @media all and (max-width: 1140px) {} */
 
 @media all and (min-width: 376px) {
-  .pics .f1,
-  .pics .f2,
-  .pics .f3,
-  .pics .f4,
-  .pics .f5 {
-    width: 98px;
-    max-width: 98px;
-    height: 98px;
-  }
-  .center-side .card * {
-    font-size: 12px;
-  }
-  .center-side .card {
-    width: 100%;
-    height: 100%;
-  }
-  .center-side .card .bottom .btn {
-    top: 22.5rem;
-  }
-  .card .post-pic {
-    margin-top: 1.3rem;
-  }
-  .opt {
-    width: 70%;
-    height: 80%;
-  }
-}
+  .left-side .mark {
+    min-height: 3.5rem;
+    max-height: 4rem;}
+} 
 @media all and (min-width: 480px) {
   .icons a {
     width: 2rem;
@@ -636,24 +582,22 @@ nav .pill,
     height: 23px;
   }
   .opt {
-    width: 70%;
-    height: 70%;
+    width: 2.2rem;
+    height: 2.2rem;
   }
   .top .avatar {
-    width: 80%;
-    height: 100%;
+    width:3.7rem;
+    height: 3.7rem;
   }
-  .center-side .card * {
+  .info .name {
     font-size: 14px;
+  }
+  .info .city {
+    font-size: 12px;
   }
   .card .post-pic {
     height: 96%;
     margin-top: 1.7rem;
-  }
-
-  .center-side .card .bottom .btn {
-    top: 79%;
-    /* top: 23.5rem; */
   }
 
   .marcas .roll a {
@@ -662,28 +606,26 @@ nav .pill,
   }
 }
 @media all and (min-width: 550px) {
-  .top .avatar {
-    width: 70%;
-    height: 100%;
-  }
   .logo img {
     max-width: 170px;
     max-height: 82px;
   }
-  .center-side .card * {
+  .info .name {
     font-size: 16px;
+  }
+  .info .city {
+    font-size: 14px;
+  }
+  .center-side .bottom  * {
+    font-size: 14px;
   }
   .card .post-pic {
     height: 96%;
     margin-top: 2rem;
   }
   .left-side .mark {
-    min-width: 5rem;
-    min-height: 5rem;
-    max-width: 6rem;
-    max-height: 6rem;
-    border-radius: 0 50% 50% 0;
-    margin: 0 0 1.5rem;
+    min-height: 4rem;
+    max-height: 4rem;
   }
   .profile .info {
     padding-left: 0rem;
@@ -694,7 +636,35 @@ nav .pill,
     /* top: 23.5rem; */
   }
 }
+@media all and (min-width: 560px){
+   .right-side .destacados {
+    max-height: 100%;
+  }
+  .left-side .mark {
+    min-height: 10%;
+    max-height: 10%;
+  }
+  .left-side .mark .pic {
+    width: 90%;
+    height: 90%;
+  }
+  .center-side .card {
+    max-width: 474px;
+    min-height: 85%;
+    height: auto;
+    max-height: 85%;
+    margin: 0 auto 0.8rem;
+  }
+}
 @media all and (min-width: 768px) {
+  .left-side .mark {
+    min-height: 12%;
+    max-height: 12%;
+  }
+  .left-side .mark .pic {
+    width: 90%;
+    height: 90%;
+  }
   .corner .login-btn {
     max-width: 200px;
     height: 100%;
@@ -732,34 +702,29 @@ nav .pill,
   .corner .search-img img {
     min-width: 20px;
   }
-  .right-side .marcas {
-    max-height: 100%;
-  }
-  .right-side .destacados {
-    max-height: 100%;
-    overflow: hidden;
-  }
+
   .top .avatar {
-    width: 95%;
-    height: 100%;
+    width: 4rem;
+    height: 4rem;
   }
-  .center-side .info * {
-    font-size: 18px;
-  }
+
+  .info .name {font-size: 16px;}
+  .info .city {font-size:  14px;}
   .opt {
-    width: 80%;
-    height: 70%;
+    width: 2.6rem;
+    height: 2.6rem;
   }
   .card .post-pic {
     height: 100%;
     /* margin-top: 3rem; */
   }
-  .center-side .card .bottom .btn {
+  .bottom .com-btn,
+  .like-btn {
     /* top: 36.5rem; */
-    top: 82%;
+    top: 0.6rem;
   }
   .card .bottom {
-    padding-top: 1rem;
+    padding-top: 0.7rem;
   }
   .add {
     position: fixed;
@@ -798,16 +763,92 @@ nav .pill,
     width: 0.1px;
   }
   h3 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
-  /* cheackear para abajo */
+  .corner .inp-search input {
+    display: initial;
+  }
+  .right-side .destacados .pics{
+    width: 60%;
+    margin: 0 auto;
+  }
+  .right-side .destacados .pics > div {
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  .marcas .roll a {
+    display: block;
+  }
+  .marcas .roll{
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+@media all and (min-width: 1024px) {
+  .center-side .card {
+    width: 100%;
+    min-height: 60%;
+    height: auto;
+    max-height: 60%;}
+  .top .avatar {
+    width: 80%;
+    height: 100%;
+  }
+  .opt {
+    width: 70%;
+    height: 70%;
+  }
+
+  .card .bottom {
+    padding-top: 1rem;
+  }
+  .bottom .com-btn,
+  .like-btn {
+    width: 36px;
+    height: 36px;
+  }
+  .center-side .card .bottom .btn {
+    top: 83%;
+    /* top: 23.5rem; */
+  }
+  .center-side .comment-text p {
+    display: inline;
+  }
+  .marcas .roll a {
+    width: 85px;
+    height: 108px;
+    padding: 1rem 0 0;
+    font-size: 12px;
+  }
+  a .marca img {
+    /* width: 100%;
+      height: 50%; */
+    width: 61px;
+    height: 58px;
+    border-radius: 50%;
+    margin: auto;
+  }
+  .marca p {
+    margin: auto;
+    font-size: 16px;
+  }
   .destacados {
     min-height: 100%;
     height: auto;
   }
-  .right-side .pics {
+    .right-side .marcas {
+    max-height: 100%;
+  }
+  .right-side .destacados {
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  .right-side .destacados .pics {
     height: 100%;
+    width: 100%;
     position: relative;
   }
   .right-side .destacados .pics > div {
@@ -855,7 +896,6 @@ nav .pill,
     -o-object-fit: contain;
     object-fit: contain;
   }
-  /* prueba */
   .marcas .roll {
     height: 200px;
     padding-top: 4rem;
@@ -885,59 +925,12 @@ nav .pill,
     background-image: -o-linear-gradient(to right top, #4280b6, #59ecc0);
     background-image: linear-gradient(to right top, #4280b6, #59ecc0);
   }
-  .corner .inp-search input {
-    display: initial;
-  }
-}
-@media all and (min-width: 1024px) {
-  .top .avatar {
-    width: 80%;
-    height: 100%;
-  }
-  .opt {
-    width: 70%;
-    height: 70%;
-  }
-
-  .card .bottom {
-    padding-top: 1rem;
-  }
-  .bottom .com-btn,
-  .like-btn {
-    width: 36px;
-    height: 36px;
-  }
-  .center-side .card .bottom .btn {
-    top: 83%;
-    /* top: 23.5rem; */
-  }
-  .center-side .comment-text p {
-    display: inline;
-  }
-  .marcas .roll a {
-    width: 85px;
-    height: 108px;
-    padding: 1rem 0 0;
-    font-size: 12px;
-  }
-  a .marca img {
-    /* width: 100%;
-      height: 50%; */
-    width: 61px;
-    height: 58px;
-    border-radius: 50%;
-    margin: auto;
-  }
-  .marca p {
-    margin: auto;
-    font-size: 16px;
-  }
 }
 @media all and (min-width: 1200px) {
   .center-side .card {
     margin: 1rem auto;
-    width: 95%;
-    height: 70%;
+    width: 45%;
+    height: 40%;
   }
   .top .avatar {
     width: 100%;
@@ -992,6 +985,12 @@ nav .pill,
   .marca p {
     margin: auto;
     font-size: 18px;
+  }
+  .left-side .mark {
+    min-width: 120px;
+    min-height: 100px;
+    max-width: 120px;
+    max-height: 100px;
   }
 }
 @media all and (min-width: 1530px) {
