@@ -2,7 +2,7 @@
   /* width: 1920px;
   height: 1080px; */
   width: 100%;
-  padding: 0.3rem;
+  padding: 1rem;
   height: 100%;
   backdrop-filter: blur(24px);
   -x-backdrop-filter: blur(24px);
@@ -18,15 +18,15 @@
     #3460c4 99%
   );
   position: absolute;
-  z-index: 110;
+  z-index: 30;
 }
-* {
-  font-size: 16px;
+/* * { */
+  
   /* font-family: Gilroy☞;
   src: local(Gilroy☞-Bold), url(/path/to/Gilroy☞-Bold.woff2) format("woff2"),
     url(/path/to/Gilroy☞-Bold.woff) format("woff"),
     url(/path/to/Gilroy☞-Bold.ttf) format("truetype"); */
-}
+/* } */
 
 .login-cont {
   width: auto;
@@ -36,13 +36,11 @@
   /* min-height: 37rem; */
   margin: 4rem auto;
   /* padding: 1rem 1.2rem; */
-  width: auto;
-  height: auto;
   max-width: 95%;
   /* max-height: 80%; */
   min-height: 33rem;
   /* margin: 30% auto; */
-  padding: 0.5rem;
+  padding:0.7rem 1rem;
   font-size: 12px;
   border-radius: 27px;
   background-color: rgba(255, 255, 255, 0.404);
@@ -85,15 +83,14 @@
 .sign-up a {
   color: #43cea2;
   font-size: 16px;
-  /* font-size: 20px; */
-  text-decoration: none;
+font-weight: bold;  text-decoration: none;
 }
 .form .logo2 {
   width: 100%;
   height: 100%;
   /* max-width: 50%; */
   max-height: 33%;
-  margin-top: 4rem;
+  margin: 3rem auto 1rem;
 }
 .inputs {
   width: 100%;
@@ -127,12 +124,8 @@
 .inputs .password {
   width: 90%;
   height: 2.2rem;
-  /* width: 100%;
-  height: 4rem; */
-  /* max-width: 80%;
-  max-height: 4rem; */
   margin: 2rem auto 1rem;
-  padding: 0px 18px;
+  padding: 0px 0 0 1.5rem;
   border-radius: 14px;
   border: 0.3px solid #70707091;
   display: block;
@@ -167,6 +160,7 @@
   border: none;
   background-color: #43cea2;
   font-size: 14px;
+  font-weight: bold;
   /* font-size: 24px; */
 }
 
@@ -198,13 +192,15 @@ p {
   width: 2rem;
   margin: 0 1rem;
   border-radius: 50%;
+  background-color: #fff;
+
 }
-.face-i {
+/* .face-i {
   background-color: #3b7eab;
 }
 .go-i {
   background-color: #c7464e;
-}
+} */
 
 @media all and (min-width: 1921px) {
   .social {

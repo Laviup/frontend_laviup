@@ -7,10 +7,10 @@ Vue.component('login-form', {
             </div>
             <div class="inputs">
                 <input type="text" name="username" id="username" class="username"
-                    placeholder="Télefono o correo electrónico">
-                <input type="password" name="password" id="password" class="password" placeholder="Contraseña">
+                    placeholder="Télefono o correo electrónico" v-model="login_user">
+                <input type="password" name="password" id="password" class="password" placeholder="Contraseña" v-model="login_psw">
                 <a href="#">He olvidado mi contraseña</a>
-                <input type="button" value="Iniciar sesión" class="login" @click="logged_in = true,login_form = false" >
+                <input type="button" value="Iniciar sesión" class="login" @click="logged_in=true,login_form=false" >
             </div>
             <div class="social">
                 <div class="social-line">
@@ -29,12 +29,13 @@ Vue.component('login-form', {
             <a href="·">Registrate</a>
         </div>
     </div>
+    <p v-if="error_msg">Error</p>
 </div>`,
     data() {
         return {
             // login
-            login_user_email: ' ',
-            login_user_psw: ' ',
+            login_user: ' ',
+            login_psw: ' ',
             logged_in: false,
         }
     },
@@ -45,6 +46,7 @@ Vue.component('login-form', {
                 if (this.login_user == x.user && this.login_psw == x.psw) {
                     this.logged_in = true;
                     store.state.logged_in = true;
+                    store.state.login_form = false;
 
                 }
                 if (this.logged_in == false) {

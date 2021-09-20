@@ -22,6 +22,7 @@ body {
   font-family: sans-serif;
   position: absolute;
 }
+.opt img,
 .pic img,
 .pics img,
 .avatar img,
@@ -184,10 +185,10 @@ nav {
 .left-side .mark .pic {
   position: absolute;
   right: 0.1rem;
-  top: 0.35rem;
+  top: 0.2rem;
   border-radius: 50%;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   overflow: hidden;
 }
 .pic img:hover {
@@ -258,12 +259,16 @@ nav {
 }
 
 .opt {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   background-color: #fff;
   border: none;
   box-shadow: 0 10px 10px 0 rgb(152, 152, 152, 0.1);
+  overflow: hidden;
+}
+.opt img{
+  filter: opacity(0.6);
 }
 .top .avatar {
   margin-top: 0.8rem;
