@@ -1,8 +1,10 @@
 const app = new Vue({
     el: '#app',
     data: {
-        logged_in: false,
+        logged_in: true,
         login_form: false,
+        side_menu:false,
+        opt_menu:false,
         users: [
             { 'user': "asd", 'psw': "asd" }
         ],
@@ -17,6 +19,7 @@ const app = new Vue({
             {'id':8,'img':"img/post-pic.png"},
             {'id':9,'img':"img/post-pic.png"},
             {'id':10,'img':"img/post-pic.png"},
+            {'id':11,'img':"img/post-pic.png"},
         ],
         cards:[
 {'id':1,'avatar':"img/post-pic.png",'name':"Alain Bermudez",'city':"Madrid",'ppic':"img/post-pic.png",'post':"Si me ves pensando no es nada, es 1 brisa!!!",'cpic':"img/post-pic.png",'cuser':"Ander Garcia",'ccom':"Uii!!!! que profundo",'cnum':32},
@@ -53,5 +56,6 @@ const app = new Vue({
             }
 
         },
+        
     }
 })

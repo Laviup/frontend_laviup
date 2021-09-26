@@ -19,7 +19,7 @@
         <div class="container">
             <header>
                 <nav class="nav-in" v-if="logged_in === true">
-                    <div class="logo">
+                    <div class="logo" @click="side_menu = ! side_menu">
                         <img src="icons/logo.svg" alt="logo" />
                     </div>
                     <!-- se que no es la mejor solucion -->
@@ -50,7 +50,7 @@
                     </div>
                 </nav>
                 <nav class="nav-out" v-if="logged_in===false">
-                    <div class="logo">
+                    <div class="logo" @click="side_menu = ! side_menu">
                         <img src="icons/logo.svg" alt="logo" />
                     </div>
                     <div class="corner">
@@ -91,11 +91,42 @@
                                     <p class="name">{{x.name}}</p>
                                     <p class="city">{{x.city}}</p>
                                 </div>
-                                <a :href="x.id" class="opt" >
+                                <button class="opt" @click="opt_menu=!opt_menu">
                                     <img src="icons/dots.png" alt="">
-                                </a>
+                            </button>
+                                <!-- <a href="#" class="opt" @click="opt_menu=!opt_menu">
+                                    <img src="icons/dots.png" alt="">
+                                </a> -->
                             </div>
                             <div class="post-pic">
+                                <div class="opt-menu" v-if="opt_menu">
+                                    <div class="log">
+                                        <a href="#">
+                                            <p>Activar notificaciones</p>
+                                        </a>
+                                    </div>
+                                    <div class="log">
+                                        <a href="#">
+                                            <p>Compartir</p>
+                                        </a>
+                                    </div>
+                                    <div class="log">
+                                        <a href="#">
+                                            <p>Copiar enlace</p>
+                                        </a>
+                                    </div>
+                                    <div class="log">
+                                        <a href="#">
+                                            <p>Silenciar</p>
+                                        </a>
+                                    </div>
+                                    <div class="log">
+                                        <a href="#">
+                                            <p>Reportar</p>
+                                        </a>
+                                    </div>
+
+                                </div>
                                 <img :src="x.ppic" alt="" />
                             </div>
                             <div class="bottom">
@@ -132,7 +163,7 @@
                 <div class="right-side">
                     <div class="destacados">
                         <h3>Destacados</h3>
-                        <div class="pics">
+                        <div class="pics ">
                             <div class="f1">
                                 <img src="img/1round.png" alt="round picture" />
                             </div>
@@ -222,26 +253,78 @@
                 </div>
             </div>
         </div>
-        <div class="side-menu">
-            <div class="white-logo"></div>
-            <div class="options">
+        <div class="side-menu" v-if="side_menu" onmouseleave="hide('side_menu')" id="side_menu">
+            <div class="white-logo">
+                <img src="icons/logo2.svg" alt="" style="filter: saturate();">
+            </div>
+            <div class="options" v-if="logged_in">
                 <div class="log">
-                      <p>Quiénes somos</p><span>></span>
+                    <a href="#">
+                      <p>Tienda</p><span>></span>
+                    </a>
                     </div>
                 <div class="log">
+                    <a href="#">
+                      <p>Mi perfil</p><span>></span>
+                    </a>
+                    </div>
+                <div class="log">
+                    <a href="#">
+                      <p>Chat</p><span>></span>
+                    </a>
+                    </div>
+                <div class="log">
+                    <a href="#">
+                      <p>Carrito</p><span>></span>
+                    </a>
+                    </div>
+                    <div class="log">
+                        <a href="#">
+                          <p>Quiénes somos</p><span>></span>
+                        </a>
+                        </div>
+                    <div class="log">
+                        <a href="#">
+                        <p>Configuración y Privaidad</p><span>></span>
+                    </a>
+                    </div>
+                    <div class="log"> 
+                        <a href="#">
+                        <p>Contáctanos</p><span>></span>
+                    </a>
+                    </div>
+                    <div class="log">
+                        <a href="#">
+                        <p>Ayudanos</p><span>></span>
+                    </a>
+                    </div>
+                    </div>
+
+                    <div class="options" v-if="!logged_in">
+                <div class="log">
+                    <a href="#">
+                      <p>Quiénes somos</p><span>></span>
+                    </a>
+                    </div>
+                <div class="log">
+                    <a href="#">
                     <p>Configuración y Privaidad</p><span>></span>
+                </a>
                 </div>
                 <div class="log"> 
+                    <a href="#">
                     <p>Contáctanos</p><span>></span>
+                </a>
                 </div>
                 <div class="log">
+                    <a href="#">
                     <p>Ayudanos</p><span>></span>
+                </a>
                 </div>
-              
+              </div>
                 
                
                 
-            </div>
             <div class="social-net">
                 <div class="net" v-for="x in nets">
                     <img :src="x.img" alt="" class="net-img">

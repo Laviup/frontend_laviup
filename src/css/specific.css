@@ -78,9 +78,9 @@ nav {
   height: 30px;
 }
 .corner .search-img img {
-  min-width: 18px;
-  width: 18px;
-  margin: 0.3rem;
+  min-width: 15px;
+  width: 15px;
+  margin: 0.4rem 0.455rem;
 }
 .corner .login-btn {
   width: 40%;
@@ -112,11 +112,15 @@ nav {
   max-width: 100%;
   max-height: 100%;
 }
+.logo{
+  padding-left: 1rem;
+}
 .logo img {
+
   width: 100%;
   height: 100%;
-  /* margin: 3% 40% 0 10%; */
-  margin: 0 0 0 10%;
+  /* margin:0 0 0 1rem; */
+  margin: 0;
 }
 .icons a {
   width: 30px;
@@ -130,18 +134,13 @@ nav {
   background-color: #fff;
   position: relative;
   overflow: hidden;
-  margin: 0 0 0 31px;
+  /* margin: 0 0 0 31px; */
+  margin: 0 0 0 51px;
 }
 .icons a img {
-  width: 18px;
-  height: 18px;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  min-width: 15px;
+width: 15px;
+margin: 0.4rem 0.455rem;
 }
 .icons .i-3 img {
   width: 32px;
@@ -172,10 +171,12 @@ nav {
   max-height: 100%;
 }
 .left-side .mark {
-  min-width: 80%;
+width: 3.2rem;
+height: 3.2rem;
+  /* min-width: 80%;
   min-height: 3.2rem;
   max-width: 80%;
-  max-height: 3.2rem;
+  max-height: 3.2rem; */
   border-radius: 0 50% 50% 0;
   margin:  1rem 0;
   background-color: #fff;
@@ -219,9 +220,11 @@ nav {
 
 .center-side .card {
   width: 100%;
+  max-width: 519px;
   min-height: 83%;
   height: auto;
-  max-height: 83%;
+  /* max-height:650px; */
+  max-height:100%;
   border-radius: 15px;
   background-color: #fff;
   padding: 0 0.4rem 0.5rem;
@@ -298,7 +301,7 @@ nav {
 .bottom .com-btn,
 .like-btn {
   position: absolute;
- top: 0;
+ top: 0.2rem;
   width: 33px;
   height: 33px;
   display: inline-block;
@@ -384,6 +387,7 @@ nav {
   font-style: normal;
   color: var(--user);
   text-decoration: underline;
+  margin: 0 auto;
 }
 .com-com {
   font-size: 10px;
@@ -391,6 +395,7 @@ nav {
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
+  margin: 0 auto;
   color: var(--pill);
 }
 .comment-text .com-number {
@@ -404,6 +409,7 @@ nav {
   line-height: 1.36;
   letter-spacing: 0.03px;
   text-align: left;
+  margin: 0 auto;
   opacity: 0.55;
   /* margin: 1.2rem; */
 }
@@ -462,7 +468,7 @@ h3 {
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.3;
+  line-height: 1;
   letter-spacing: 0.06px;
   text-align: left;
   color: var(--pill);
@@ -479,13 +485,28 @@ h3 {
 .right-side .destacados .pics {
   width: 100%;
   height: 100%;
+  margin-top: 0.5rem;
   overflow: hidden;
 }
-.right-side .destacados .pics > div {
-  width: 98px;
-  height: 98px;
+.right-side .destacados .pics  div {
+  width: 92px;
+  height: 92px;
   display: inline-block;
-  margin-bottom: 4rem;
+  margin:0 0.5rem 4rem 0;
+  overflow: hidden;
+  /* border: 1px solid red; */
+  box-shadow: 0 6px 10px 0 rgba(131, 125, 125, 0.1);
+
+  border-radius: 50%;
+  position: relative;
+}
+.right-side .destacados .pics  div img{
+width: 130%;
+height: 130%;
+margin: 0;
+position: absolute;
+top: -0.7rem;
+left: -0.8rem;
 }
 .marcas {
   margin-top: 0;
@@ -570,10 +591,18 @@ nav .pill,
 
 @media all and (min-width: 376px) {
   .left-side .mark {
-    min-height: 3.5rem;
-    max-height: 4rem;}
+    width: 3.4rem;
+    height: 3.4rem;
 } 
+}
 @media all and (min-width: 480px) {
+  .bottom .com-btn,
+.like-btn {
+ top: 0.4rem;}
+  .left-side .mark {
+    width: 3.6rem;
+    height: 3.6rem;
+} 
   .icons a {
     width: 2rem;
     height: 2rem;
@@ -600,8 +629,16 @@ nav .pill,
   .info .city {
     font-size: 12px;
   }
+  .center-side .card {
+    max-width: 378px;
+    min-height: 83%;
+    max-height: 100%;
+    height: auto;
+    /* max-height:522px; */
+    margin: 0 auto 0.8rem;
+  }
   .card .post-pic {
-    height: 96%;
+    /* height: 96%; */
     margin-top: 1.7rem;
   }
 
@@ -625,46 +662,53 @@ nav .pill,
     font-size: 14px;
   }
   .card .post-pic {
-    height: 96%;
+    /* height: 96%; */
     margin-top: 2rem;
-  }
-  .left-side .mark {
-    min-height: 4rem;
-    max-height: 4rem;
   }
   .profile .info {
     padding-left: 0rem;
     /* width: 100%; */
   }
-  .center-side .card .bottom .btn {
-    top: 80%;
-    /* top: 23.5rem; */
-  }
+  .bottom .com-btn,
+.like-btn {
+ top: 0.8rem;}
 }
 @media all and (min-width: 560px){
    .right-side .destacados {
     max-height: 100%;
   }
   .left-side .mark {
-    min-height: 10%;
-    max-height: 10%;
-  }
-  .left-side .mark .pic {
-    width: 90%;
-    height: 90%;
-  }
-  .center-side .card {
-    max-width: 474px;
-    min-height: 85%;
-    height: auto;
-    max-height: 85%;
-    margin: 0 auto 0.8rem;
-  }
+    width: 3.8rem;
+    height: 3.8rem;
+} 
+.add {
+  position: fixed;
+  bottom: 27px;
+  left: 45%;
+}
+.opt{
+  margin-top: 0.6rem;
+}
+.com-btn {
+  right: 4rem;
+}
+.like-btn {
+  right: 1rem;
+}
 }
 @media all and (min-width: 768px) {
   .left-side .mark {
-    min-height: 12%;
-    max-height: 12%;
+   width: 4rem;
+   height: 4rem;
+  }
+  .add {
+    bottom: 27px;
+    left: 35%;
+  }
+  .center-side .card {
+width: 100%;
+  max-width: 519px;
+  max-height:650px;
   }
   .left-side .mark .pic {
     width: 90%;
@@ -720,22 +764,18 @@ nav .pill,
     height: 2.6rem;
   }
   .card .post-pic {
-    height: 100%;
-    /* margin-top: 3rem; */
+    /* height: 100%; */
+    margin-top: 1.5rem;
   }
   .bottom .com-btn,
   .like-btn {
     /* top: 36.5rem; */
-    top: 0.6rem;
+    top: 0.4rem;
   }
   .card .bottom {
     padding-top: 0.7rem;
   }
-  .add {
-    position: fixed;
-    bottom: 8rem;
-    left: 45%;
-  }
+
 
   .icons .i-2,
   .icons .i-3,
@@ -782,28 +822,30 @@ nav .pill,
     display: block;
     margin-bottom: 0.3rem;
   }
+
   .marcas .roll a {
     display: block;
   }
   .marcas .roll{
     height: 100%;
     flex-direction: column;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+
   }
 }
 @media all and (min-width: 1024px) {
-  .center-side .card {
-    width: 100%;
-    min-height: 60%;
-    height: auto;
-    max-height: 60%;}
-  .top .avatar {
+  .left-side .mark {
+    width: 5rem;
+    height: 5rem;
+   }
+
+  /* .top .avatar {
     width: 80%;
     height: 100%;
-  }
+  } */
   .opt {
-    width: 70%;
-    height: 70%;
+    width: 2.8rem;
+    height: 2.8rem;
   }
 
   .card .bottom {
@@ -814,12 +856,12 @@ nav .pill,
     width: 36px;
     height: 36px;
   }
-  .center-side .card .bottom .btn {
-    top: 83%;
-    /* top: 23.5rem; */
-  }
+
   .center-side .comment-text p {
     display: inline;
+  }
+  .marcas .roll{
+    flex-direction: row;
   }
   .marcas .roll a {
     width: 85px;
@@ -932,30 +974,20 @@ nav .pill,
   }
 }
 @media all and (min-width: 1200px) {
-  .center-side .card {
-    margin: 1rem auto;
-    width: 45%;
-    height: 40%;
-  }
+
   .top .avatar {
-    width: 100%;
-    height: 90%;
+    width: 5rem;
+    height: 5rem;
   }
   .center-side .info * {
     font-size: 16px;
   }
   .opt {
-    width: 80%;
-    height: 60%;
+    width: 2.6rem;
+    height: 2.6rem;
   }
-  .card .post-pic {
-    height: 90%;
-    /* margin-top: 3rem; */
-  }
-  .center-side .card .bottom .btn {
-    top: 76%;
-    /* top: 23.5rem; */
-  }
+
+
   .bottom .post {
     color: var(--user);
     width: 95%;
@@ -967,7 +999,7 @@ nav .pill,
     font-size: 16px;
   }
   .card .bottom {
-    padding-top: 0rem;
+    padding-top: 3rem;
   }
   .right-side .destacados .pics {
     margin-left: 10%;
@@ -992,23 +1024,35 @@ nav .pill,
     font-size: 18px;
   }
   .left-side .mark {
-    min-width: 120px;
-    min-height: 100px;
-    max-width: 120px;
-    max-height: 100px;
+   width: 6rem;
+   height: 6rem;
   }
+  .add {
+    position: fixed;
+    bottom: 27px;
+    left: 30%;
+  }
+  /* .bottom .com-btn,
+  .like-btn {
+   top: 2rem;
+  } */
 }
 @media all and (min-width: 1530px) {
   .center-side {
     height: 100%;
   }
+  .center-side .card {
+    margin: 1rem auto;
+    width: 45%;
+    height: 40%;
+  }
   .opt {
-    width: 70%;
-    height: 60%;
+    width: 2.6rem;
+    height: 2.6rem;
   }
   .top .avatar {
-    width: 90%;
-    height: 100%;
+    width: 4rem;
+    height: 4rem;
   }
 
   h3 {
@@ -1023,23 +1067,15 @@ nav .pill,
     max-height: 630px;
   }
   .card .post-pic {
-    width: 100%;
-    /* height: 90%; */
-    /* width: 492px; */
-    height: auto;
-    max-height: 492px;
-    /* width: 360px;
-    height: 360px; */
-    border-radius: 15px;
-    overflow: hidden;
     margin-top: 2.8rem;
   }
-  .center-side .card .bottom .btn {
-    top: 77%;
+  .bottom .com-btn,
+  .like-btn {
+    top: 1.5rem;
   }
   .top .avatar {
-    width: 80%;
-    height: 100%;
+    width: 5rem;
+    height: 5rem;
     margin-top: 2rem;
   }
   .top .info * {
@@ -1056,28 +1092,7 @@ nav .pill,
   .roll {
     min-height: 100%;
   }
-  .marcas .roll a {
-    width: 18%;
-    height: 60%;
-    max-width: 170px;
-    max-height: 180px;
-    padding: 1rem 0 0;
-    font-size: 12px;
-  }
-  a .marca img {
-    /* width: 100%;
-      height: 50%; */
-    width: 90%;
-    height: 70%;
-    max-width: 153px;
-    max-height: 111px;
-    border-radius: 50%;
-    margin: auto;
-  }
-  .marca p {
-    margin: auto;
-    font-size: 25px;
-  }
+
 }
 /* 375,480,768,1024,1200 */
 
