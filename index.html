@@ -91,7 +91,7 @@
                                     <p class="name">{{x.name}}</p>
                                     <p class="city">{{x.city}}</p>
                                 </div>
-                                <button class="opt" @click="opt_menu=!opt_menu">
+                                <button class="opt" @click="hide(x.id)">
                                     <img src="icons/dots.png" alt="">
                             </button>
                                 <!-- <a href="#" class="opt" @click="opt_menu=!opt_menu">
@@ -99,7 +99,7 @@
                                 </a> -->
                             </div>
                             <div class="post-pic">
-                                <div class="opt-menu" v-if="opt_menu">
+                                <div class="opt-menu"  :id="x.id">
                                     <div class="log">
                                         <a href="#">
                                             <p>Activar notificaciones</p>

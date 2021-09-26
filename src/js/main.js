@@ -56,6 +56,16 @@ const app = new Vue({
             }
 
         },
-        
+        hide( id){
+            this.opt_menu=!this.opt_menu;
+            if(this.opt_menu = true){
+            document.getElementById(id).style.display = "none";
+            console.log(id)
+            }
+            else{
+            document.getElementById(id).style.display = "initial";
+
+            }
+          }
     }
 })
